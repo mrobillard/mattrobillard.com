@@ -9,6 +9,7 @@ const Home: NextPage = () => {
       </Head>
       <div
         style={{
+          flexDirection: 'column',
           width: '100%',
           height: '100vh',
           background: '#f2f7f7',
@@ -17,6 +18,26 @@ const Home: NextPage = () => {
           justifyContent: 'center',
         }}
       >
+        <h1
+          style={{
+            fontFamily: 'Tiempos',
+            fontWeight: 400,
+            fontSize: '48px',
+            lineHeight: '32px',
+            letterSpacing: '0.05em',
+            color: 'black',
+            margin: '20px'
+          }}
+        >
+          Matt Robillard
+        </h1>
+        <hr
+          style={{
+            height: '2px',
+            width: '300px',
+            margin: '10px'
+          }}
+        />
         <p
           style={{
             fontFamily: 'objektiv-mk3',
@@ -27,7 +48,7 @@ const Home: NextPage = () => {
             color: 'black',
           }}
         >
-          Matt Robillard
+          contact@mattrobillard.com
         </p>
       </div>
     </>
