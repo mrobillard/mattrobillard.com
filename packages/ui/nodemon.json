@@ -1,0 +1,6 @@
+{
+    "$schema": "https://json.schemastore.org/nodemon",
+    "watch": ["src"],
+    "ext": ".ts,.tsx,.js,.json",
+    "exec": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json"
+}

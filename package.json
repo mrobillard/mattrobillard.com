@@ -1,0 +1,48 @@
+{
+  "name": "@mr/website",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "yarn@1.22.18",
+  "homepage": "https://github.com/mrobillard/mattrobillard.com#readme",
+  "description": "Matt Robillard Website",
+  "license": "UNLICENSED",
+  "author": "Matt Robillard <matt@mattrobillard.com> (https://github.com/mrobillard)",
+  "keywords": [
+    "matt",
+    "robillard",
+    "technologies",
+    "design",
+    "engineering",
+    "essays",
+    "blog"
+  ],
+  "workspaces": [
+    "app",
+    "packages/*"
+  ],
+  "engines": {
+    "npm": ">=8.7",
+    "node": ">=14.19"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robillardtechnologies/website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robillardtechnologies/website/issues"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "turbo run dev --no-cache --parallel --continue --",
+    "lint": "turbo run lint --",
+    "build": "turbo run build --",
+    "start": "turbo run start --no-cache --parallel --continue --"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "16.2.3",
+    "@commitlint/config-conventional": "16.2.1",
+    "husky": "7.0.4",
+    "prettier": "2.6.2",
+    "turbo": "1.2.4"
+  }
+}

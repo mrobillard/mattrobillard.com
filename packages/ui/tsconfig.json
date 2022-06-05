@@ -1,0 +1,19 @@
+{
+    "extends": "@mr/tsconfig/library.json",
+    "compilerOptions": {
+      "outDir": "./dist",
+      "baseUrl": ".",
+      "paths": {
+        "@core/*": ["src/core/*"],
+        "@forms/*": ["src/forms/*"],
+        "@icons/*": ["src/icons/*"],
+        "@layout/*": ["src/layout/*"],
+        "@navigation/*": ["src/navigation/*"],
+        "@preset": ["src/preset"],
+        "@preset/*": ["src/preset/*"],
+        "@typography/*": ["src/typography/*"]
+      }
+    },
+    "include": ["**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules", "dist"]
+}
