@@ -1,0 +1,23 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        'cultured': '#f2f7f7',
+        'prussian-blue': 'rgba(11, 36, 54, 1)',
+      },
+      fontFamily: {
+        barlow: ["'Barlow'", 'sans-serif'],
+        roboto: ["'Roboto Mono'", 'monospace'],
+        tiempos: ["'Test Tiempos Headline'", 'sans-serif'],
+      },
+      screens: {
+        md: '48em',
+        lg: '64em',
+        xl: '90em',
+      },
+    },
+  },
+  plugins: [],
+};
