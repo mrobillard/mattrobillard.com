@@ -1,3 +1,1 @@
-<p align="center">
-  <img src="./.github/logo.png" />
-</p>
+![Matt Robillard](./.github/logo.png)
