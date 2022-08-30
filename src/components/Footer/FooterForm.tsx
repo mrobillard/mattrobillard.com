@@ -32,8 +32,9 @@ const FooterForm: React.FC = () => {
         htmlFor="contact"
         className={clsx({
           'inline-flex w-full justify-center md:justify-start': true,
-          'font-barlow font-semibold text-[1.6rem] leading-[1.2rem]': true,
-          'tracking-[0.05em] text-prussian-blue uppercase transition-all': true,
+          'font-semibold md:text-[1.6rem] md:leading-[1.2rem]': true,
+          'font-barlow md:tracking-[0.05em] text-prussian-blue uppercase': true,
+          'transition-all text-[1rem] leading-[2.8rem] tracking-[0.1em]': true,
           'text-red-400': invalid,
         })}
       >

@@ -25,7 +25,9 @@ const Article: React.FC<ArticleItem> = ({
     <article className="flex flex-col w-full max-w-[29.5rem] md:max-w-[60.8rem] lg:max-w-[64rem] gap-[2.4rem]">
       <div className="flex w-full justify-between items-start pb-[2.4rem] border-b border-prussian-blue">
         <h2 className="max-w-[20rem] md:max-w-[51.8rem] lg:max-w-[55rem] font-tiempos font-light not-italic text-[2.8rem] leading-[3.4rem] tracking-[0.03em] text-prussian-blue">
-          {title}
+          <Link href={`/${section}/${slug}`} passHref>
+            <a>{title}</a>
+          </Link>
         </h2>
         <div className="flex flex-col w-fit pt-[0.8rem] gap-[0.5rem]">
           <span className="font-barlow font-semibold not-italic text-[1rem] leading-[0.8rem] tracking-[0.1em] text-right text-prussian-blue">
