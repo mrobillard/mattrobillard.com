@@ -1,6 +1,8 @@
+import clsx from 'clsx';
 import Link from 'next/link';
 import { useMemo } from 'react';
 
+import { useFilter } from '@/hooks/use-filter';
 import { ArticleItem } from '@/utils/posts';
 
 const ArticleHeader: React.FC<ArticleItem> = ({
@@ -10,6 +12,8 @@ const ArticleHeader: React.FC<ArticleItem> = ({
   content,
   tags,
 }) => {
+  const filter = useFilter();
+
   const minRead = useMemo(() => {
     const wordsPerMinute = 200;
     const textLength = content.trim().split(/\s+/).length;
@@ -66,7 +70,11 @@ const ArticleHeader: React.FC<ArticleItem> = ({
           {tags.map((tag, i) => (
             <span
               key={`${title}-${date}-${i}-${tag}`}
-              className="inline-flex select-none px-[1.4rem] py-[0.7rem] font-barlow font-semibold not-italic text-[1rem] leading-[1.2rem] tracking-[0.1em] text-prussian-blue uppercase border border-prussian-blue rounded-[0.3rem] transition-all"
+              className={clsx({
+                'inline-flex select-none px-[1.4rem] py-[0.7rem] font-barlow font-semibold not-italic text-[1rem] leading-[1.2rem] tracking-[0.1em] text-prussian-blue uppercase border border-prussian-blue rounded-[0.3rem] transition-all':
+                  true,
+                'bg-prussian-blue text-white': filter.tags.includes(tag),
+              })}
             >
               {tag}
             </span>

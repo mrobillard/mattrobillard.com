@@ -1,6 +1,8 @@
+import clsx from 'clsx';
 import Link from 'next/link';
 import { useMemo } from 'react';
 
+import { useFilter } from '@/hooks/use-filter';
 import type { ArticleItem } from '@/utils/posts';
 
 const Article: React.FC<ArticleItem> = ({
@@ -12,6 +14,12 @@ const Article: React.FC<ArticleItem> = ({
   excerpt,
   slug,
 }) => {
+  const filter = useFilter();
+
+  const handleTagClick = (tag: string) => {
+    filter.toggleTag(tag);
+  };
+
   const minRead = useMemo(() => {
     const wordsPerMinute = 200;
     const textLength = content.trim().split(/\s+/).length;
@@ -42,7 +50,12 @@ const Article: React.FC<ArticleItem> = ({
         {tags.map((tag, i) => (
           <button
             key={`${title}-${date}-${i}-${tag}`}
-            className="inline-flex px-[1.4rem] py-[0.7rem] font-barlow font-semibold not-italic text-[1rem] leading-[1.2rem] tracking-[0.1em] text-prussian-blue uppercase border border-prussian-blue rounded-[0.3rem] hover:border-blue-gray hover:text-blue-gray active:text-white active:bg-prussian-blue transition-all"
+            onClick={() => handleTagClick(tag)}
+            className={clsx({
+              'inline-flex px-[1.4rem] py-[0.7rem] font-barlow font-semibold not-italic text-[1rem] leading-[1.2rem] tracking-[0.1em] text-prussian-blue uppercase border border-prussian-blue rounded-[0.3rem] hover:border-blue-gray hover:bg-transparent hover:text-blue-gray active:text-white active:bg-prussian-blue transition-all':
+                true,
+              'bg-prussian-blue text-white': filter.tags.includes(tag),
+            })}
           >
             {tag}
           </button>
@@ -52,7 +65,7 @@ const Article: React.FC<ArticleItem> = ({
         {excerpt}
       </p>
       <Link href={`/${section}/${slug}`} passHref>
-        <a className="inline-flex items-center font-barlow font-semibold not-italic text-[1.6rem] leading-[1.2rem] tracking-[0.05em] text-prussian-blue uppercase hover:text-blue-gray active:text-blue-gray transition-all">
+        <a className="inline-flex w-fit items-center font-barlow font-semibold not-italic text-[1.6rem] leading-[1.2rem] tracking-[0.05em] text-prussian-blue uppercase hover:text-blue-gray active:text-blue-gray transition-all">
           Keep Reading
           <span style={{ marginInlineStart: '0.5rem' }}>
             <svg
