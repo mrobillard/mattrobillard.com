@@ -1,6 +1,6 @@
 import { Head, Html, Main, NextScript } from 'next/document';
 
-import CriticalCSS from '@/components/ui/CriticalCSS';
+import CriticalCSS from '@/components/CriticalCSS';
 
 export default function MattRobillardDocument() {
   return (
