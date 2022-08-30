@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const NavbarMenu: React.FC = () => {
-  const router = useRouter();
-  const isWritingActive = router.pathname.startsWith('/writing');
-  const isTechnicalActive = router.pathname.startsWith('/technical');
-  const isContact = router.pathname.startsWith('/contact');
+  const { pathname } = useRouter();
+  const isWritingActive = pathname === '/' || pathname.startsWith('/writing');
+  const isTechnicalActive = pathname.startsWith('/technical');
+  const isContact = pathname.startsWith('/contact');
 
   return (
     <ul className="flex flex-col gap-[1rem] pr-[2rem]">

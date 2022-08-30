@@ -39,7 +39,7 @@ const Fonts: React.FC = () => (
           font-style: normal;
           font-weight: 400;
           font-display: swap;
-          src: url('/fonts/Barlow/RobotoMono-Bold.woff2') format('woff2');
+          src: url('/fonts/RobotoMono/RobotoMono-Bold.woff2') format('woff2');
         }
 
         @font-face {
@@ -47,7 +47,7 @@ const Fonts: React.FC = () => (
           font-style: normal;
           font-weight: 500;
           font-display: swap;
-          src: url('/fonts/Barlow/RobotoMono-Medium.woff2') format('woff2');
+          src: url('/fonts/RobotoMono/RobotoMono-Medium.woff2') format('woff2');
         }
 
         @font-face {
@@ -55,7 +55,7 @@ const Fonts: React.FC = () => (
           font-style: normal;
           font-weight: 300;
           font-display: swap;
-          src: url('/fonts/Barlow/TestTiemposHeadline-Light.woff2') format('woff2');
+          src: url('/fonts/TestTiemposHeadline/TestTiemposHeadline-Light.woff2') format('woff2');
         }
 
         @font-face {
@@ -63,7 +63,11 @@ const Fonts: React.FC = () => (
           font-style: italic;
           font-weight: 300;
           font-display: swap;
-          src: url('/fonts/Barlow/TestTiemposHeadline-LightItalic.woff2') format('woff2');
+          src: url('/fonts/TestTiemposHeadline/TestTiemposHeadline-LightItalic.woff2') format('woff2');
+        }
+
+        * {
+          outline: none;
         }
 
         html {

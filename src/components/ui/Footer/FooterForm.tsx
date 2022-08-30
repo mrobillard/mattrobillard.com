@@ -47,7 +47,7 @@ const FooterForm: React.FC = () => {
           placeholder="Enter email for updates"
           className={clsx({
             'inline-flex pb-[1.2rem] pr-[0.5rem] grow h-full': true,
-            'bg-cultured border-b border-b-prussian-blue outline-none': true,
+            'bg-cultured border-b border-b-prussian-blue': true,
             'font-barlow font-normal not-italic text-[1.3rem]': true,
             'leading-[1.3rem] tracking-[0.1em] transition-all': true,
             'placeholder:text-blue-gray placeholder:text-opacity-30': true,
