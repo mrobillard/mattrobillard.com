@@ -7,6 +7,7 @@ const HomePage: NextPage = () => {
       <Head>
         <title>Matt Robillard</title>
       </Head>
+      <main className="grow"></main>
     </>
   );
 };

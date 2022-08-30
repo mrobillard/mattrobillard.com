@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         'cultured': '#f2f7f7',
         'prussian-blue': 'rgba(11, 36, 54, 1)',
+        'blue-gray': 'rgba(11, 36, 54, 0.3)',
       },
       fontFamily: {
         barlow: ["'Barlow'", 'sans-serif'],
