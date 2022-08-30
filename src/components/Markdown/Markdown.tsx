@@ -1,8 +1,8 @@
+import dynamic from 'next/dynamic';
 import ReactMarkdown from 'react-markdown';
 
 import MarkdownAnchor from './MarkdownAnchor';
 import MarkdownBlockquote from './MarkdownBlockquote';
-import MarkdownCode from './MarkdownCode';
 import MarkdownHeading from './MarkdownHeading';
 import MarkdownHR from './MarkdownHR';
 import MarkdownImage from './MarkdownImage';
@@ -10,6 +10,10 @@ import MarkdownInlineCode from './MarkdownInlineCode';
 import MarkdownOrderedList from './MarkdownOrderedList';
 import MarkdownParagraph from './MarkdownParagraph';
 import { MarkdownProps } from './MarkdownProps';
+
+const MarkdownCode = dynamic(() => import('./MarkdownCode'), {
+  ssr: false,
+});
 
 const Markdown: React.FC<MarkdownProps> = ({ children }) => {
   return (
