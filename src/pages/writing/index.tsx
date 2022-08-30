@@ -8,12 +8,12 @@ import Pagination from '@/components/Pagination';
 import { useFilter } from '@/hooks/use-filter';
 import { ArticleItem, getAllWritingPosts } from '@/utils/posts';
 
-type HomePageProps = {
+type WritingPageProps = {
   posts: ArticleItem[];
   years: number[];
 };
 
-const HomePage: NextPage<HomePageProps> = ({ posts, years }) => {
+const WritingPage: NextPage<WritingPageProps> = ({ posts, years }) => {
   const filter = useFilter();
 
   const filteredPosts = useMemo(() => {
@@ -48,7 +48,7 @@ export const getStaticProps: GetStaticProps = () => {
   posts
     .map((post) => post.year)
     .forEach((year) => {
-      if (years.includes(year)) {
+      if (!years.includes(year)) {
         years.push(year);
       }
     });
@@ -61,4 +61,4 @@ export const getStaticProps: GetStaticProps = () => {
   };
 };
 
-export default HomePage;
+export default WritingPage;

@@ -6,14 +6,14 @@ import Article from '@/components/Article';
 import Breadcrumb from '@/components/Breadcrumb';
 import Pagination from '@/components/Pagination';
 import { useFilter } from '@/hooks/use-filter';
-import { ArticleItem, getAllWritingPosts } from '@/utils/posts';
+import { ArticleItem, getAllTechnicalPosts } from '@/utils/posts';
 
-type HomePageProps = {
+type TechnicalPageProps = {
   posts: ArticleItem[];
   years: number[];
 };
 
-const HomePage: NextPage<HomePageProps> = ({ posts, years }) => {
+const TechnicalPage: NextPage<TechnicalPageProps> = ({ posts, years }) => {
   const filter = useFilter();
 
   const filteredPosts = useMemo(() => {
@@ -23,7 +23,7 @@ const HomePage: NextPage<HomePageProps> = ({ posts, years }) => {
   return (
     <>
       <Head>
-        <title>Matt Robillard / Writing</title>
+        <title>Matt Robillard / Technical</title>
       </Head>
       <main className="flex flex-col items-center justify-center grow w-full pb-[15rem] md:pb-[20rem] gap-[6.4rem]">
         <Breadcrumb />
@@ -42,13 +42,13 @@ const HomePage: NextPage<HomePageProps> = ({ posts, years }) => {
 };
 
 export const getStaticProps: GetStaticProps = () => {
-  const posts = getAllWritingPosts();
+  const posts = getAllTechnicalPosts();
   const years: number[] = [];
 
   posts
     .map((post) => post.year)
     .forEach((year) => {
-      if (years.includes(year)) {
+      if (!years.includes(year)) {
         years.push(year);
       }
     });
@@ -61,4 +61,4 @@ export const getStaticProps: GetStaticProps = () => {
   };
 };
 
-export default HomePage;
+export default TechnicalPage;
