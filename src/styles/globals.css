@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.blockquote {
+  @apply relative 
+  w-[80%] 
+  border-l 
+  border-l-prussian-blue 
+  my-[3rem] 
+  md:my-[3rem] 
+  py-[1rem] 
+  pl-[2rem]
+  before:content-['']
+  before:inline-block
+  before:absolute
+  before:w-[0.8rem]
+  before:h-[0.1rem]
+  before:bg-prussian-blue
+  before:top-0
+  before:left-0
+  after:content-['']
+  after:inline-block
+  after:absolute
+  after:w-[0.8rem]
+  after:h-[0.1rem]
+  after:bg-prussian-blue
+  after:bottom-0
+  after:left-0;
+}
+
+.blockquote > p {
+  @apply font-tiempos 
+  font-light 
+  italic 
+  text-[1.6rem] 
+  leading-[2.4rem] 
+  tracking-[0.05em] 
+  text-prussian-blue;
+}
+
+.ordered-list {
+  list-style-type: decimal;
+  counter-reset: li;
+}
+
+.ordered-list li {
+  @apply font-barlow font-normal not-italic text-[1rem] leading-[1.8rem] tracking-[0.05em] text-blue-gray;
+}
+
+.ordered-list li a {
+  @apply font-barlow font-bold not-italic text-[1rem] leading-[1.8rem] tracking-[0.05em] text-blue-gray;
+}
