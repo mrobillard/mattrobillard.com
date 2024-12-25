@@ -1,0 +1,60 @@
+2024-12-25T02:34:11.440821Z  WARN build:build_inner: turborepo_repository::package_graph::builder: Unable to calculate transitive closures: Workspace 'website' not found in lockfile
+2024-12-25T02:34:11.442261Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo/cookies/.turbo-cookie")}
+2024-12-25T02:34:11.442283Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-12-25T02:34:11.543109Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".turbo/cookies/1.cookie")}
+2024-12-25T02:34:11.543120Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-12-25T02:34:14.743485Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/.sanity/runtime"), AnchoredSystemPathBuf("cms/.sanity")}
+2024-12-25T02:34:14.743512Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T02:34:16.342945Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/.sanity/runtime/index.html"), AnchoredSystemPathBuf("cms/.sanity/runtime/app.js")}
+2024-12-25T02:34:16.342959Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T02:53:19.254123Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/.env.example")}
+2024-12-25T02:53:19.256759Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T02:53:23.432503Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/.env.example")}
+2024-12-25T02:53:23.432544Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T02:54:28.942914Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/package.json")}
+2024-12-25T02:54:28.944711Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T02:55:12.831943Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/sanity.config.ts")}
+2024-12-25T02:55:12.831989Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T02:57:08.256309Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/sanity.cli.ts")}
+2024-12-25T02:57:08.258196Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T02:57:25.555322Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("package-lock.json")}
+2024-12-25T02:57:25.556309Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-12-25T02:57:26.247752Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".husky/_/post-merge"), AnchoredSystemPathBuf(".husky/_/post-checkout"), AnchoredSystemPathBuf(".husky/_/prepare-commit-msg"), AnchoredSystemPathBuf(".husky/_/husky.sh"), AnchoredSystemPathBuf(".husky/_/.gitignore"), AnchoredSystemPathBuf(".husky/_/post-rewrite"), AnchoredSystemPathBuf(".husky/_/pre-push"), AnchoredSystemPathBuf(".husky/_/pre-applypatch"), AnchoredSystemPathBuf(".husky/_/pre-commit"), AnchoredSystemPathBuf(".husky/_/applypatch-msg"), AnchoredSystemPathBuf(".husky/_/pre-auto-gc"), AnchoredSystemPathBuf(".husky/_/pre-rebase"), AnchoredSystemPathBuf(".husky/_/commit-msg"), AnchoredSystemPathBuf(".husky/_/h"), AnchoredSystemPathBuf(".husky/_/post-commit"), AnchoredSystemPathBuf(".husky/_/post-applypatch")}
+2024-12-25T02:57:26.247807Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-12-25T02:58:20.953274Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/schemaTypes")}
+2024-12-25T02:58:20.954301Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T02:58:24.645541Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/schemas")}
+2024-12-25T02:58:24.645586Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T02:58:24.687833Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2024-12-25T02:58:40.644951Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/schemas/index.ts")}
+2024-12-25T02:58:40.644982Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T02:58:44.747423Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/schemas/content.ts")}
+2024-12-25T02:58:44.747483Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T02:58:48.244936Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/schemas/tag.ts")}
+2024-12-25T02:58:48.244959Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T02:59:01.944216Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/schemas/post.ts")}
+2024-12-25T02:59:01.944254Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T03:01:14.749232Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/schemas/index.ts")}
+2024-12-25T03:01:14.750857Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T03:01:32.239331Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/schemas/content.ts")}
+2024-12-25T03:01:32.239386Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T03:03:04.545870Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/schemas/post.ts")}
+2024-12-25T03:03:04.547361Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T03:03:28.144062Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/schemas/tag.ts")}
+2024-12-25T03:03:28.145608Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T03:03:47.736284Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/schemas/tag.ts")}
+2024-12-25T03:03:47.736324Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T03:03:50.934732Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/schemas/post.ts")}
+2024-12-25T03:03:50.934743Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T03:03:57.235270Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("cms/schemas/content.ts")}
+2024-12-25T03:03:57.235309Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("cms"), path: AnchoredSystemPathBuf("cms") }}))
+2024-12-25T03:12:40.420607Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("package.json")}
+2024-12-25T03:12:40.422209Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(All(DefaultGlobalFileChanged))
+2024-12-25T03:13:51.424062Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("website/package.json")}
+2024-12-25T03:13:51.425478Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("website"), path: AnchoredSystemPathBuf("website") }}))
+2024-12-25T03:14:07.124530Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("")}
+2024-12-25T03:14:07.124555Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({}))
+2024-12-25T03:14:47.224839Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("package-lock.json")}
+2024-12-25T03:14:47.226215Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
+2024-12-25T03:14:48.113225Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf(".husky/_/post-checkout"), AnchoredSystemPathBuf(".husky/_/commit-msg"), AnchoredSystemPathBuf(".husky/_/post-rewrite"), AnchoredSystemPathBuf(".husky/_/h"), AnchoredSystemPathBuf(".husky/_/applypatch-msg"), AnchoredSystemPathBuf(".husky/_/post-commit"), AnchoredSystemPathBuf(".husky/_/post-merge"), AnchoredSystemPathBuf(".husky/_/pre-rebase"), AnchoredSystemPathBuf(".husky/_/husky.sh"), AnchoredSystemPathBuf(".husky/_/pre-applypatch"), AnchoredSystemPathBuf(".husky/_/.gitignore"), AnchoredSystemPathBuf(".husky/_/pre-commit"), AnchoredSystemPathBuf(".husky/_/pre-push"), AnchoredSystemPathBuf(".husky/_/post-applypatch"), AnchoredSystemPathBuf(".husky/_/prepare-commit-msg"), AnchoredSystemPathBuf(".husky/_/pre-auto-gc")}
+2024-12-25T03:14:48.113238Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }}))
