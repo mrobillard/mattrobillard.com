@@ -6,9 +6,16 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'type',
+      name: 'visible',
+      type: 'boolean',
+      title: 'Visible',
+      initialValue: true,
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'category',
       type: 'string',
-      title: 'Type',
+      title: 'Category',
       options: {
         layout: 'radio',
         list: [
@@ -36,16 +43,22 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'visible',
-      type: 'boolean',
-      title: 'Visible',
-      initialValue: true,
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+      rows: 3,
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'publishedAt',
+      title: 'Published At',
+      type: 'date',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
@@ -57,6 +70,22 @@ export default defineType({
         maxLength: 96,
       },
       validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'quote',
+      title: 'Quote',
+      type: 'text',
+      rows: 4,
+    }),
+    defineField({
+      name: 'quoteAuthor',
+      title: 'Quote Author',
+      type: 'string',
+      hidden: ({ document }) => !document?.quote,
+      validation: (Rule) =>
+        Rule.custom((value, context) =>
+          !!context.document?.quote && !value ? 'Required' : true,
+        ),
     }),
     defineField({
       name: 'body',
