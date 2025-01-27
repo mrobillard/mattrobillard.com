@@ -1,9 +1,6 @@
-import { Suspense } from 'react';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-
 import type { PostPreview } from '@/server/types';
-import { TagButton } from './tag-button';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export function PostPreview({ post }: { post: PostPreview }) {
   return (
@@ -22,17 +19,17 @@ export function PostPreview({ post }: { post: PostPreview }) {
       <hr className="w-full border-current" />
       <div className="flex w-full flex-wrap items-center gap-2">
         {post.tags.map((tag) => (
-          <Suspense
+          <button
             key={tag.slug}
-            fallback={
-              <span className="bg-navy/5 block h-7 w-10 animate-pulse" />
-            }
+            className="hover:bg-navy focus-visible:bg-navy inline-flex overflow-hidden rounded border border-current px-2 py-1 text-xs font-semibold uppercase tracking-widest transition-colors hover:text-white focus-visible:text-white focus-visible:outline-none"
           >
-            <TagButton tag={tag} />
-          </Suspense>
+            {tag.title}
+          </button>
         ))}
       </div>
-      <p className="text-sm">{post.excerpt}</p>
+      <p className="text-sm">
+        {post.excerpt}
+      </p>
       <Link
         href={`/${post.category}/${post.slug}`}
         className="group inline-flex items-center gap-2 font-semibold uppercase focus-visible:outline-none"

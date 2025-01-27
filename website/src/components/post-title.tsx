@@ -19,7 +19,7 @@ export function PostTitle({ post }: { post: Post }) {
         {post.tags.map((tag) => (
           <span
             key={tag.slug}
-            className="inline-flex h-7 overflow-hidden rounded border border-current px-3 py-1 text-xs font-semibold uppercase tracking-widest"
+            className="inline-flex overflow-hidden rounded border border-current px-3 py-1 text-xs font-semibold uppercase tracking-widest"
           >
             {tag.title}
           </span>
