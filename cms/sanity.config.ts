@@ -12,8 +12,8 @@ export default defineConfig({
   name: 'default',
   title: 'mattrobillard.com',
 
-  dataset: `${process.env.SANITY_STUDIO_API_DATASET}`,
-  projectId: `${process.env.SANITY_STUDIO_API_PROJECT_ID}`,
+  dataset: 'production',
+  projectId: 'ld4mlc17',
 
   plugins: [
     structureTool(),
