@@ -9,7 +9,7 @@ export const RandomReveal = forwardRef<
   HTMLAttributes<HTMLSpanElement>
 >(({ className, children, ...props }, ref) => {
   useEffect(() => {
-    TextDecodeAnimation.init(300);
+    TextDecodeAnimation.init(100);
     return () => TextDecodeAnimation.destroy();
   }, []);
   return (
