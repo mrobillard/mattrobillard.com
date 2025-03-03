@@ -1,9 +1,9 @@
 import './globals.css';
 
+import clsx from 'clsx';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { Barlow, Roboto_Mono } from 'next/font/google';
-import clsx from 'clsx';
 
 const BarlowFont = Barlow({
   variable: '--font-sans',
@@ -33,8 +33,11 @@ const TestTiemposFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Matt Robillard',
-  description: 'Matt Robillard Personal Site',
+  title: {
+    default: 'Blog',
+    template: '%s | Blog',
+  },
+  description: "Matt Robillard's blog",
 };
 
 export default function RootLayout({
