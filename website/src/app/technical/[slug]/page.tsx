@@ -16,12 +16,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = params;
   const post = await getPostBySlug(slug, 'technical');
+  const ogParams = new URLSearchParams({ title: post.title });
 
   return {
     title: post.title,
     description: post.excerpt,
     keywords: post.tags.map((tag) => tag.title),
     category: 'Technical',
+    openGraph: {
+      images: [`/api/og?${ogParams}`],
+    },
   };
 }
 
