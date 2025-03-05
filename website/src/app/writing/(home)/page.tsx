@@ -1,8 +1,9 @@
+import type { Metadata } from 'next';
+
 import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
 import { PostPreview } from '@/components/post-preview';
 import { getPostsPreview } from '@/server/post';
-import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Writing',

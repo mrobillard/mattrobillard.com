@@ -2,6 +2,11 @@ import type { PortableTextBlock } from 'next-sanity';
 
 export type Category = 'writing' | 'technical';
 
+export type Tag = {
+  title: string;
+  slug: string;
+};
+
 export type Post = {
   _id: string;
   slug: string;
@@ -13,10 +18,7 @@ export type Post = {
   quoteAuthor: string | null;
   estimatedReadingTime: number;
   body: Array<PortableTextBlock>;
-  tags: Array<{
-    title: string;
-    slug: string;
-  }>;
+  tags: Array<Tag>;
 };
 
 export type PostPreview = Pick<

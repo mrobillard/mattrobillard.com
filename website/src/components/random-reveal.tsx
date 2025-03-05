@@ -1,8 +1,9 @@
 'use client';
 
+import { forwardRef, HTMLAttributes, useEffect } from 'react';
+
 import { cn } from '@/lib/cn';
 import { TextDecodeAnimation } from '@/lib/randomize';
-import { forwardRef, HTMLAttributes, useEffect } from 'react';
 
 export const RandomReveal = forwardRef<
   HTMLSpanElement,
