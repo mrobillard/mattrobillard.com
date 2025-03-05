@@ -47,6 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script async src="https://cdn.seline.so/seline.js" />
+      </head>
       <body
         className={clsx(
           BarlowFont.className,
