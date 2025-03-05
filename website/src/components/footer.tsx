@@ -69,7 +69,7 @@ export function Footer({
         >
           <LogoMark className="h-auto w-12" />
           <div className="flex flex-row gap-1 text-xs tracking-widest md:flex-col md:items-end md:gap-2">
-            <span>© 2024 Matt Robillard.</span>
+            <span>© {new Date().getFullYear()} Matt Robillard.</span>
             <span>All rights reserved.</span>
           </div>
         </div>
