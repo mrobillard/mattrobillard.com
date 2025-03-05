@@ -6,7 +6,7 @@ export default function NotFoundPage() {
   return (
     <div className="bg-navy flex min-h-screen w-full flex-col items-start">
       <Navbar variant="navy" />
-      <main className="text-background flex w-full flex-1 grow items-center justify-center">
+      <main className="text-background flex w-full flex-1 grow items-center justify-center px-4 pb-32 md:px-8 lg:px-12">
         <section className="mx-auto flex w-full max-w-5xl flex-col items-center gap-12">
           <svg
             fill="none"
