@@ -10,8 +10,15 @@ export const RandomReveal = forwardRef<
 >(({ className, children, ...props }, ref) => {
   useEffect(() => {
     TextDecodeAnimation.init(100);
-    return () => TextDecodeAnimation.destroy();
+
+    const interval = setInterval(() => TextDecodeAnimation.reset(), 5000);
+
+    return () => {
+      clearInterval(interval);
+      TextDecodeAnimation.destroy();
+    };
   }, []);
+
   return (
     <span {...props} ref={ref} className={cn(className, 'text-decode-effect')}>
       {children}

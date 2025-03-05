@@ -65,7 +65,6 @@ export class TextDecodeAnimation {
         if (!characterSpanEl) return;
   
         characterSpanEl.textContent = this.text[this.position];
-        console.log('Flipping ' + characterSpanEl.textContent);
         characterSpanEl.classList.remove('placeholder');
         this.position++;
         this.lastUpdateTime = currentTime;
