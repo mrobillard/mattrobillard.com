@@ -1,5 +1,6 @@
 import { ServerRuntime } from 'next';
 import { ImageResponse } from 'next/og';
+import type { NextRequest } from 'next/server';
 
 export const runtime: ServerRuntime = 'edge';
 
@@ -10,7 +11,7 @@ export const size = {
   height: 630,
 };
 
-export async function GET(request: Request) {
+export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const title = searchParams.get('title') || '';
   const slicedTitle = title.slice(0, 65) + (title.length > 65 ? '...' : '');
