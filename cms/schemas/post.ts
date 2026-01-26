@@ -92,6 +92,12 @@ export default defineType({
       title: 'Body',
       type: 'blockContent',
     }),
+    defineField({
+      name: 'newsletter',
+      title: 'Send to Newsletter',
+      type: 'boolean',
+      initialValue: false,
+    })
   ],
   preview: {
     select: {

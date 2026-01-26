@@ -12,8 +12,10 @@ export default defineConfig({
   name: 'default',
   title: 'mattrobillard.com',
 
+  // fy49p1qt
+  // AC: ld4mlc17
   dataset: 'production',
-  projectId: 'ld4mlc17',
+  projectId: 'fy49p1qt',
 
   plugins: [
     structureTool(),
