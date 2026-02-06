@@ -1,8 +1,10 @@
 import { createClient } from 'next-sanity';
 
+import { env } from '@/env';
+
 export const cms = createClient({
-  dataset: 'production',
-  projectId: 'fy49p1qt',
-  apiVersion: '2023-05-03',
+  dataset: env.SANITY_DATASET,
+  projectId: env.SANITY_PROJECT_ID,
+  apiVersion: env.SANITY_API_VERSION,
   useCdn: process.env.NODE_ENV === 'production',
 });
