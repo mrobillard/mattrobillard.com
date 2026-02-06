@@ -4,13 +4,6 @@ import type { NextRequest } from 'next/server';
 
 export const runtime: ServerRuntime = 'edge';
 
-export const alt = 'Test';
-
-export const size = {
-  width: 1200,
-  height: 630,
-};
-
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const title = searchParams.get('title') || '';
