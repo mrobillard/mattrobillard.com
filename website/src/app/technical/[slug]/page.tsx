@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 
 import { Footer } from '@/components/footer';
@@ -16,6 +17,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = params;
   const post = await getPostBySlug(slug, 'technical');
+  if (!post) {
+    notFound();
+  }
   const ogParams = new URLSearchParams({ title: post.title });
 
   return {
@@ -36,6 +40,9 @@ export default async function TechnicalPostPage({
 }) {
   const { slug } = params;
   const post = await getPostBySlug(slug, 'technical');
+  if (!post) {
+    notFound();
+  }
 
   return (
     <div className="bg-background flex min-h-screen w-full flex-col items-start">
