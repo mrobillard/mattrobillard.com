@@ -13,6 +13,13 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'newsletter',
+      title: 'Newsletter Update Sent',
+      type: 'boolean',
+      initialValue: false,
+      hidden: true,
+    }),
+    defineField({
       name: 'category',
       type: 'string',
       title: 'Category',
