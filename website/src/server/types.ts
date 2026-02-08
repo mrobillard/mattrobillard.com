@@ -11,6 +11,7 @@ export type Post = {
   _id: string;
   slug: string;
   title: string;
+  newsletter: boolean;
   category: Category;
   excerpt: string;
   publishedAt: string;
