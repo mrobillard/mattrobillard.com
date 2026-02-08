@@ -1,6 +1,9 @@
+import { Suspense } from 'react';
+
 import type { PostPreview } from '@/server/types';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { TagButton } from './tag-button';
 
 export function PostPreview({ post }: { post: PostPreview }) {
   return (
@@ -19,12 +22,11 @@ export function PostPreview({ post }: { post: PostPreview }) {
       <hr className="w-full border-current" />
       <div className="flex w-full flex-wrap items-center gap-2">
         {post.tags.map((tag) => (
-          <button
+          <Suspense
             key={tag.slug}
-            className="hover:bg-navy focus-visible:bg-navy inline-flex overflow-hidden rounded border border-current px-2 py-1 text-xs font-semibold uppercase tracking-widest transition-colors hover:text-white focus-visible:text-white focus-visible:outline-none"
-          >
-            {tag.title}
-          </button>
+            fallback={<span className="bg-navy/5 block h-7 w-10 animate-pulse" />}          >
+            <TagButton tag={tag} />
+          </Suspense>
         ))}
       </div>
       <p className="text-sm">
