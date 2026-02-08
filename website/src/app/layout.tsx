@@ -5,6 +5,8 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { Barlow, Roboto_Mono } from 'next/font/google';
 
+import { env } from '@/env';
+
 const BarlowFont = Barlow({
   variable: '--font-sans',
   subsets: ['latin'],
@@ -33,7 +35,7 @@ const TestTiemposFont = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mattrobillard.com'),
+  metadataBase: new URL(env.SITE_METADATA_BASE_URL || 'https://mattrobillard.com'),
   description: "Matt Robillard's blog",
   title: {
     default: 'Blog',
