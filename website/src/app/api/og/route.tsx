@@ -7,6 +7,7 @@ export const runtime: ServerRuntime = 'edge';
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const title = searchParams.get('title') || '';
+  const format = searchParams.get('format') || 'general';
   const slicedTitle = title.slice(0, 65) + (title.length > 65 ? '...' : '');
 
   const tiemposHeadline = fetch(
@@ -89,7 +90,7 @@ export async function GET(request: NextRequest) {
     ),
     {
       width: 1200,
-      height: 630,
+      height: format === 'twitter' ? 600 : 630,
       fonts: [
         {
           name: 'Tiempos Headline',

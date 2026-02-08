@@ -28,7 +28,21 @@ export async function generateMetadata({
     keywords: post.tags.map((tag) => tag.title),
     category: 'Writing',
     openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+      publishedTime: post.publishedAt,
+      authors: ['Matt Robillard'],
+      tags: post.tags.map((tag) => tag.title),
+      url: `https://mattrobillard.com/writing/${post.slug}`,
+      siteName: 'Matt Robillard',
       images: [`/api/og?${ogParams}`],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [`'/api/og?format=twitter&' + ogParams`],
     },
   };
 }

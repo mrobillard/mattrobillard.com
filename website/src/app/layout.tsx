@@ -33,11 +33,33 @@ const TestTiemposFont = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://mattrobillard.com'),
+  description: "Matt Robillard's blog",
   title: {
     default: 'Blog',
     template: '%s | Blog',
   },
-  description: "Matt Robillard's blog",
+  keywords: [
+    'blog',
+    'personal',
+    'development',
+    'programming',
+    'software',
+    'engineering',
+    'technology',
+    'science',
+    'security',
+  ],
+  openGraph: {
+    title: 'Matt Robillard',
+    description: "Matt Robillard's blog",
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Matt Robillard',
+    description: "Matt Robillard's blog",
+  },
 };
 
 export default function RootLayout({
